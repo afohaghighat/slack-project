@@ -2,8 +2,7 @@ import * as actionTypes from "./types";
 import axios from "axios";
 
 export const fetchMessages = messageId => dispatch => {
-	const token =
-		"xoxp-662538051717-664675011254-662259487620-7c261455f9eb61beb2898c63e8049c18";
+	const token = "MY_TOKEN_REMOVED_IN_GITHUB";
 	axios
 		.get(
 			`https://slack.com/api/conversations.history?token=${token}&channel=${messageId}`
@@ -36,8 +35,7 @@ export const sendMessage = data => dispatch => {
 			}
 		]
 	};
-	const token =
-		"xoxp-662538051717-664675011254-662259487620-7c261455f9eb61beb2898c63e8049c18";
+	const token = "MY_TOKEN_REMOVED_IN_GITHUB";
 
 	const config = {
 		"Content-Type": "application/x-www-form-urlencoded",
@@ -66,8 +64,7 @@ export const deleteMessage = data => dispatch => {
 		channel: data.currentChannelId,
 		ts: data.ts
 	};
-	const token =
-		"xoxp-662538051717-664675011254-662259487620-7c261455f9eb61beb2898c63e8049c18";
+	const token = "MY_TOKEN_REMOVED_IN_GITHUB";
 
 	const config = {
 		"Content-Type": "application/json",
